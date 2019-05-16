@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="dom.css">
+</head>
+<body>
+	<meta charset="utf-8">
+	<div>
+		DOM cái này điiii
+	</div>
+	<p>lol</p>
+	<script type="text/javascript">
+		var c = document.getElementsByTagName('div');
+		c[0].style.background = "red";
+		//tạo thẻ html và thêm vào body
+		var p = document.createElement('h1');
+		p.innerHTML = "Hey "
+		var text = document.createTextNode("Hi I'm Ngue");
+		p.appendChild(text);
+		document.getElementsByTagName('body')[0].appendChild(p);
+		c[0].addEventListener("click", function(){
+			var h3 = document.createElement('h3');
+			h3.innerHTML = "Evanna";
+			var d = document.getElementsByTagName('body')[0];
+			d.insertBefore(h3, this);
+		});
+		var e = document.getElementsByTagName('p')[0];
+		e.addEventListener('click',function () {
+			var d = document.getElementsByTagName('body')[0];
+			var need_remove = document.getElementsByTagName('h1')[0];
+			d.removeChild(this);
+		});
+	</script>
+</body>
+</html>
